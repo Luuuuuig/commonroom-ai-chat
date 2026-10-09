@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A private workspace for two AI assistants and a shared conversation.">
+  <title>Commonroom · AI group chat</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <section id="login-screen" class="login-screen" hidden aria-labelledby="login-title">
+    <form id="login-form" class="login-card">
+      <span class="brand-mark" aria-hidden="true">c</span>
+      <p class="eyebrow">YOUR PRIVATE WORKSPACE</p>
+      <h1 id="login-title">A little room.<br>Two perspectives.</h1>
+      <p class="muted">Sign in to your shared AI workspace.</p>
+      <label for="password">Workspace password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required>
+      <button type="submit" class="primary">Enter workspace <span aria-hidden="true">↗</span></button>
+      <p id="login-error" role="alert" class="error-text"></p>
+      <p class="fine-print">Use the password configured for this deployment.<br>This does not sign you in to ChatGPT or Claude.</p>
+    </form>
+  </section>
+
+  <div id="workspace" class="workspace" hidden>
+    <aside class="sidebar" aria-label="Workspace navigation">
+      <a class="brand" href="/" aria-label="Commonroom home"><span class="brand-mark" aria-hidden="true">c</span><span>commonroom<span class="brand-caption">A SHARED AI WORKSPACE</span></span></a>
+      <button id="new-chat" class="new-chat"><span aria-hidden="true">＋</span> New conversation</button>
+      <div class="sidebar-heading">CONVERSATIONS <span id="conversation-count">0</span></div>
+      <nav id="conversation-list" class="conversation-list" aria-label="Conversations"></nav>
+      <div class="sidebar-footer">
+        <button id="connections-button" class="nav-button"><span class="status-dot" aria-hidden="true"></span> Connections <span class="nav-arrow" aria-hidden="true">↗</span></button>
+        <button id="import-button" class="nav-button"><span aria-hidden="true">↥</span> Import conversation</button>
+        <div class="privacy-note"><span class="privacy-symbol" aria-hidden="true">◇</span><span>Private workspace<br><small>Separately billed APIs disabled</small></span></div>
+      </div>
+    </aside>
+    <main class="main">
+      <div id="mode-banner" class="mode-banner" role="status"><span class="banner-label">DEMO</span><span>Mock responses only. No AI providers connected.</span></div>
+      <header class="conversation-header">
+        <div class="conversation-heading"><p class="eyebrow">YOUR ROOM</p><h1 id="conversation-title">Start a conversation</h1><label class="sr-only" for="mobile-conversations">Current conversation</label><select id="mobile-conversations" class="mobile-conversations"><option>Start a conversation</option></select></div>
+        <div class="header-actions"><button id="context-button" class="subtle-button" title="Edit the context both assistants receive"><span aria-hidden="true">▤</span> Shared context <span id="context-count" class="count-badge">0</span></button><button id="export-button" class="icon-button" title="Export conversation as JSON" aria-label="Export conversation as JSON">↧</button></div>
+      </header>
+      <div id="global-error" class="global-error" role="alert" hidden><span id="error-message"></span><button id="dismiss-error" class="icon-button" aria-label="Dismiss error">×</button></div>
+      <div id="pending-send" class="pending-send" role="status" hidden><span>Delivery unconfirmed. Retry the original request safely.</span><div><button id="retry-send" type="button">Retry original</button><button id="discard-send" type="button">Clear pending</button></div></div>
+      <section id="message-scroll" class="message-scroll" aria-label="Conversation messages">
+        <div id="empty-state" class="empty-state"><div class="participant-pair" aria-hidden="true"><span class="avatar codex">O</span><span class="avatar claude">C</span></div><p class="eyebrow">THINK IT THROUGH, TOGETHER</p><h2>One conversation.<br>A second perspective.</h2><p>Choose an assistant to answer. The other can review its work, with the same shared context.</p><div class="empty-meta"><span class="small-dot codex-dot"></span> OpenAI route pending <span class="divider">+</span><span class="small-dot claude-dot"></span> Claude Code</div><p class="empty-footnote">Native chat history and account memory are not connected.</p></div>
+        <div id="messages" class="messages"></div>
+        <div id="jobs" class="jobs" aria-live="polite"></div>
+      </section>
+      <div class="composer-area">
+        <form id="compose-form" class="composer">
+          <label for="compose" class="sr-only">Message the group</label>
+          <textarea id="compose" rows="3" placeholder="Bring a question, a draft, or an idea…" maxlength="30000" required></textarea>
+          <div class="composer-controls"><div class="composer-options"><label class="provider-select"><span aria-hidden="true">@</span><span class="sr-only">Assistant to answer</span><select id="provider"><option value="codex">ChatGPT</option><option value="claude">Claude</option></select></label><label class="toggle-label"><input id="auto-review" type="checkbox" checked><span class="toggle" aria-hidden="true"></span> Peer review</label><details class="more-options"><summary aria-label="More message options">···</summary><div class="options-popover"><label><input id="auto-revision" type="checkbox"> Revise after review</label><button id="preview-button" type="button">Inspect shared prompt</button></div></details></div><button id="send-button" class="send-button" type="submit" aria-label="Send message"><span aria-hidden="true">↑</span><span class="send-label">Send</span></button></div>
+        </form>
+        <div class="composer-footnote"><span id="route-hint">ChatGPT answers. Claude reviews.</span><span>Enter to send · Shift + Enter for a new line</span></div>
+      </div>
+    </main>
+  </div>
+
+  <dialog id="new-chat-dialog" class="small-dialog" aria-labelledby="new-chat-title"><form id="new-chat-form"><div class="dialog-header"><h2 id="new-chat-title">New conversation</h2><button class="icon-button" type="button" data-close aria-label="Close">×</button></div><label for="new-chat-name">Conversation name</label><input id="new-chat-name" type="text" maxlength="120" placeholder="What are we working on?" required><div class="dialog-actions"><button type="button" class="subtle-button" data-close>Cancel</button><button type="submit" class="primary">Create conversation</button></div></form></dialog>
+  <dialog id="connections-dialog" class="connections-dialog" aria-labelledby="connections-title"><div class="dialog-header"><div><p class="eyebrow">WORKSPACE SETTINGS</p><h2 id="connections-title">Connections</h2></div><button class="icon-button" data-close aria-label="Close">×</button></div><p class="dialog-description">Live providers are not connected. OpenAI needs a supported Sign in with ChatGPT route. Claude uses native Claude Code sign-in. Your workspace password is separate.</p><div id="connection-list"></div><div class="settings-note"><strong>Separately billed model APIs are disabled.</strong><p>No API keys are requested or used. Native ChatGPT and Claude history, memory, custom instructions, and web-app tools are not automatically shared.</p></div><p class="fine-print">A connection marked unverified has not passed a live subscription test. Demo results do not verify provider access.</p><div class="dialog-actions"><button id="logout-button" class="subtle-button">Sign out of workspace</button></div></dialog>
+  <dialog id="context-dialog" class="context-dialog" aria-labelledby="context-title"><form id="context-form"><div class="dialog-header"><div><p class="eyebrow">AVAILABLE TO BOTH ASSISTANTS</p><h2 id="context-title">Shared context</h2></div><button class="icon-button" type="button" data-close aria-label="Close">×</button></div><p class="dialog-description">Add the facts, preferences, or project notes you want to share. Only saved context is included in future requests.</p><div class="context-editor-heading"><label for="context-text">Project notes</label><span id="context-version" class="muted">Version 0</span></div><textarea id="context-text" rows="12" maxlength="30000" placeholder="For example: Our goal is… Keep responses concise. Use these project decisions…"></textarea><div class="source-heading"><label for="context-file">Add a text or Markdown file</label><input id="context-file" type="file" accept=".txt,.md,.markdown,text/plain,text/markdown" multiple></div><ul id="context-sources" class="context-sources"></ul><p class="fine-print">Files are read as text and included only after you save. Attachments and their references share a 12,000-character limit. Project notes allow 30,000 characters.</p><div class="dialog-actions"><button type="button" class="subtle-button" data-close>Cancel</button><button id="context-save" type="submit" class="primary">Save shared context</button></div></form></dialog>
+  <dialog id="preview-dialog" class="preview-dialog" aria-labelledby="preview-title"><div class="dialog-header"><div><p class="eyebrow">REQUEST TRANSPARENCY</p><h2 id="preview-title">Shared prompt preview</h2></div><button class="icon-button" data-close aria-label="Close">×</button></div><p class="dialog-description">This is the server-generated preview for your current message. A review also includes the assistant’s answer.</p><pre id="preview-content" tabindex="0"></pre></dialog>
+  <input id="import-file" type="file" accept=".json,application/json" hidden>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script type="module" src="/app.mjs"></script>
+</body>
+</html>

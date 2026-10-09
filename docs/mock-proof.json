@@ -1,0 +1,286 @@
+{
+  "evidenceType": "MOCK ONLY: deterministic fixtures, no intelligent answers or factual peer review",
+  "startedAt": "2026-10-09T12:39:59.813Z",
+  "completedAt": "2026-10-09T12:39:59.831Z",
+  "runtime": "v24.19.0",
+  "realProviderCalls": 0,
+  "separateModelApiCalls": 0,
+  "deploymentTest": "not run",
+  "transcript": [
+    {
+      "id": "281b475e-4ea2-4a87-8c38-af57df0f815c",
+      "sequence": 1,
+      "conversationId": "062dcc2d-e009-46b0-a0a4-7c84c64b2c16",
+      "taskId": "4fcd80d8-acb3-4211-a579-e08f17efd1f4",
+      "role": "user",
+      "kind": "user",
+      "provider": "user",
+      "text": "@ChatGPT restate the selected value.",
+      "replyTo": null,
+      "createdAt": "2026-10-09T12:39:59.817Z",
+      "providerSessionRef": null,
+      "providerMode": null,
+      "model": null,
+      "metadata": {},
+      "jobId": null,
+      "stage": null
+    },
+    {
+      "id": "12c2d043-0b4c-4a4b-a370-cc77cd570236",
+      "sequence": 2,
+      "conversationId": "062dcc2d-e009-46b0-a0a4-7c84c64b2c16",
+      "taskId": "4fcd80d8-acb3-4211-a579-e08f17efd1f4",
+      "role": "assistant",
+      "kind": "primary",
+      "provider": "codex",
+      "text": "MOCK ANSWER (codex). Deterministic test fixture cee749987a73. This verifies message routing and storage only. It does not perform intelligent generation, factual review, or revision.\n\nContext received: on\": 1,\n    \"text\": \"Agreed project name: Harbor. The selected value is 8.\",\n    \"sources\": [\n      \"Synthetic test facts. No private user data.\"\n    ]\n  },\n  \"sharedHistory\": [],\n  \"currentRequest\": \"@ChatGPT restate the selected value.\"\n}",
+      "replyTo": "281b475e-4ea2-4a87-8c38-af57df0f815c",
+      "createdAt": "2026-10-09T12:39:59.820Z",
+      "providerSessionRef": "mock-codex-cee749987a73",
+      "providerMode": "mock",
+      "model": "deterministic-test-fixture",
+      "metadata": {
+        "evidence": null,
+        "contextVersion": 1,
+        "contextMessageIds": [],
+        "mock": true
+      },
+      "jobId": "4fcd80d8-acb3-4211-a579-e08f17efd1f4",
+      "stage": "primary"
+    },
+    {
+      "id": "3ac0a1e8-7c12-46b7-b1d8-5ef095378ff8",
+      "sequence": 3,
+      "conversationId": "062dcc2d-e009-46b0-a0a4-7c84c64b2c16",
+      "taskId": "4fcd80d8-acb3-4211-a579-e08f17efd1f4",
+      "role": "assistant",
+      "kind": "review",
+      "provider": "claude",
+      "text": "MOCK PEER REVIEW (claude). Deterministic test fixture 00d6afac252e. This verifies message routing and storage only. It does not perform intelligent generation, factual review, or revision.\n\nContext received: 8.\\\",\\n    \\\"sources\\\": [\\n      \\\"Synthetic test facts. No private user data.\\\"\\n    ]\\n  },\\n  \\\"sharedHistory\\\": [],\\n  \\\"currentRequest\\\": \\\"@ChatGPT restate the selected value.\\\"\\n}\",\n    \"provider\": \"codex\",\n    \"evidence\": null\n  }\n}",
+      "replyTo": "12c2d043-0b4c-4a4b-a370-cc77cd570236",
+      "createdAt": "2026-10-09T12:39:59.821Z",
+      "providerSessionRef": "mock-claude-00d6afac252e",
+      "providerMode": "mock",
+      "model": "deterministic-test-fixture",
+      "metadata": {
+        "evidence": null,
+        "contextVersion": 1,
+        "contextMessageIds": [],
+        "reviewLimitation": "Final answer and explicitly recorded evidence only; tools are disabled by the provider adapter.",
+        "mock": true
+      },
+      "jobId": "4fcd80d8-acb3-4211-a579-e08f17efd1f4",
+      "stage": "review"
+    },
+    {
+      "id": "ae0069d9-50c8-48de-a63c-f3f835b1b3c2",
+      "sequence": 4,
+      "conversationId": "062dcc2d-e009-46b0-a0a4-7c84c64b2c16",
+      "taskId": "19302ca4-853a-4993-9cfd-87d3500160ae",
+      "role": "user",
+      "kind": "user",
+      "provider": "user",
+      "text": "@Claude check the previous discussion.",
+      "replyTo": null,
+      "createdAt": "2026-10-09T12:39:59.822Z",
+      "providerSessionRef": null,
+      "providerMode": null,
+      "model": null,
+      "metadata": {},
+      "jobId": null,
+      "stage": null
+    },
+    {
+      "id": "d529d1b9-776d-4282-85fb-cafc6c76e65b",
+      "sequence": 5,
+      "conversationId": "062dcc2d-e009-46b0-a0a4-7c84c64b2c16",
+      "taskId": "19302ca4-853a-4993-9cfd-87d3500160ae",
+      "role": "assistant",
+      "kind": "primary",
+      "provider": "claude",
+      "text": "MOCK ANSWER (claude). Deterministic test fixture 0d4eb43f9d1c. This verifies message routing and storage only. It does not perform intelligent generation, factual review, or revision.\n\nContext received: n    \\\"evidence\\\": null\\n  }\\n}\",\n      \"replyTo\": \"12c2d043-0b4c-4a4b-a370-cc77cd570236\",\n      \"createdAt\": \"2026-10-09T12:39:59.821Z\",\n      \"providerMode\": \"mock\"\n    }\n  ],\n  \"currentRequest\": \"@Claude check the previous discussion.\"\n}",
+      "replyTo": "ae0069d9-50c8-48de-a63c-f3f835b1b3c2",
+      "createdAt": "2026-10-09T12:39:59.823Z",
+      "providerSessionRef": "mock-claude-0d4eb43f9d1c",
+      "providerMode": "mock",
+      "model": "deterministic-test-fixture",
+      "metadata": {
+        "evidence": null,
+        "contextVersion": 1,
+        "contextMessageIds": [
+          "281b475e-4ea2-4a87-8c38-af57df0f815c",
+          "12c2d043-0b4c-4a4b-a370-cc77cd570236",
+          "3ac0a1e8-7c12-46b7-b1d8-5ef095378ff8"
+        ],
+        "mock": true
+      },
+      "jobId": "19302ca4-853a-4993-9cfd-87d3500160ae",
+      "stage": "primary"
+    },
+    {
+      "id": "45dbbb3c-009a-4773-975b-02f00992f19c",
+      "sequence": 6,
+      "conversationId": "062dcc2d-e009-46b0-a0a4-7c84c64b2c16",
+      "taskId": "19302ca4-853a-4993-9cfd-87d3500160ae",
+      "role": "assistant",
+      "kind": "review",
+      "provider": "codex",
+      "text": "MOCK PEER REVIEW (codex). Deterministic test fixture 82932701cf81. This verifies message routing and storage only. It does not perform intelligent generation, factual review, or revision.\n\nContext received: 0-cc77cd570236\\\",\\n      \\\"createdAt\\\": \\\"2026-10-09T12:39:59.821Z\\\",\\n      \\\"providerMode\\\": \\\"mock\\\"\\n    }\\n  ],\\n  \\\"currentRequest\\\": \\\"@Claude check the previous discussion.\\\"\\n}\",\n    \"provider\": \"claude\",\n    \"evidence\": null\n  }\n}",
+      "replyTo": "d529d1b9-776d-4282-85fb-cafc6c76e65b",
+      "createdAt": "2026-10-09T12:39:59.824Z",
+      "providerSessionRef": "mock-codex-82932701cf81",
+      "providerMode": "mock",
+      "model": "deterministic-test-fixture",
+      "metadata": {
+        "evidence": null,
+        "contextVersion": 1,
+        "contextMessageIds": [
+          "281b475e-4ea2-4a87-8c38-af57df0f815c",
+          "12c2d043-0b4c-4a4b-a370-cc77cd570236",
+          "3ac0a1e8-7c12-46b7-b1d8-5ef095378ff8"
+        ],
+        "reviewLimitation": "Final answer and explicitly recorded evidence only; tools are disabled by the provider adapter.",
+        "mock": true
+      },
+      "jobId": "19302ca4-853a-4993-9cfd-87d3500160ae",
+      "stage": "review"
+    },
+    {
+      "id": "26bd7358-1f5f-4820-afcd-847617a2388f",
+      "sequence": 7,
+      "conversationId": "062dcc2d-e009-46b0-a0a4-7c84c64b2c16",
+      "taskId": "ef42f02b-b5ab-49da-8b11-9e29fb26d206",
+      "role": "user",
+      "kind": "user",
+      "provider": "user",
+      "text": "@ChatGPT use the corrected value.",
+      "replyTo": null,
+      "createdAt": "2026-10-09T12:39:59.826Z",
+      "providerSessionRef": null,
+      "providerMode": null,
+      "model": null,
+      "metadata": {},
+      "jobId": null,
+      "stage": null
+    },
+    {
+      "id": "5edeba2b-6b2b-4ced-ad89-5fbc9813d80d",
+      "sequence": 8,
+      "conversationId": "062dcc2d-e009-46b0-a0a4-7c84c64b2c16",
+      "taskId": "ef42f02b-b5ab-49da-8b11-9e29fb26d206",
+      "role": "assistant",
+      "kind": "primary",
+      "provider": "codex",
+      "text": "MOCK ANSWER (codex). Deterministic test fixture 54f3c3f1868c. This verifies message routing and storage only. It does not perform intelligent generation, factual review, or revision.\n\nContext received: e\\\",\\n    \\\"evidence\\\": null\\n  }\\n}\",\n      \"replyTo\": \"d529d1b9-776d-4282-85fb-cafc6c76e65b\",\n      \"createdAt\": \"2026-10-09T12:39:59.824Z\",\n      \"providerMode\": \"mock\"\n    }\n  ],\n  \"currentRequest\": \"@ChatGPT use the corrected value.\"\n}",
+      "replyTo": "26bd7358-1f5f-4820-afcd-847617a2388f",
+      "createdAt": "2026-10-09T12:39:59.827Z",
+      "providerSessionRef": "mock-codex-54f3c3f1868c",
+      "providerMode": "mock",
+      "model": "deterministic-test-fixture",
+      "metadata": {
+        "evidence": null,
+        "contextVersion": 2,
+        "contextMessageIds": [
+          "281b475e-4ea2-4a87-8c38-af57df0f815c",
+          "12c2d043-0b4c-4a4b-a370-cc77cd570236",
+          "3ac0a1e8-7c12-46b7-b1d8-5ef095378ff8",
+          "ae0069d9-50c8-48de-a63c-f3f835b1b3c2",
+          "d529d1b9-776d-4282-85fb-cafc6c76e65b",
+          "45dbbb3c-009a-4773-975b-02f00992f19c"
+        ],
+        "mock": true
+      },
+      "jobId": "ef42f02b-b5ab-49da-8b11-9e29fb26d206",
+      "stage": "primary"
+    },
+    {
+      "id": "848cd329-e078-462c-9439-df873fb5fbc4",
+      "sequence": 9,
+      "conversationId": "062dcc2d-e009-46b0-a0a4-7c84c64b2c16",
+      "taskId": "ef42f02b-b5ab-49da-8b11-9e29fb26d206",
+      "role": "assistant",
+      "kind": "review",
+      "provider": "claude",
+      "text": "MOCK PEER REVIEW (claude). Deterministic test fixture a71a0b70e5c7. This verifies message routing and storage only. It does not perform intelligent generation, factual review, or revision.\n\nContext received: 82-85fb-cafc6c76e65b\\\",\\n      \\\"createdAt\\\": \\\"2026-10-09T12:39:59.824Z\\\",\\n      \\\"providerMode\\\": \\\"mock\\\"\\n    }\\n  ],\\n  \\\"currentRequest\\\": \\\"@ChatGPT use the corrected value.\\\"\\n}\",\n    \"provider\": \"codex\",\n    \"evidence\": null\n  }\n}",
+      "replyTo": "5edeba2b-6b2b-4ced-ad89-5fbc9813d80d",
+      "createdAt": "2026-10-09T12:39:59.830Z",
+      "providerSessionRef": "mock-claude-a71a0b70e5c7",
+      "providerMode": "mock",
+      "model": "deterministic-test-fixture",
+      "metadata": {
+        "evidence": null,
+        "contextVersion": 2,
+        "contextMessageIds": [
+          "281b475e-4ea2-4a87-8c38-af57df0f815c",
+          "12c2d043-0b4c-4a4b-a370-cc77cd570236",
+          "3ac0a1e8-7c12-46b7-b1d8-5ef095378ff8",
+          "ae0069d9-50c8-48de-a63c-f3f835b1b3c2",
+          "d529d1b9-776d-4282-85fb-cafc6c76e65b",
+          "45dbbb3c-009a-4773-975b-02f00992f19c"
+        ],
+        "reviewLimitation": "Final answer and explicitly recorded evidence only; tools are disabled by the provider adapter.",
+        "mock": true
+      },
+      "jobId": "ef42f02b-b5ab-49da-8b11-9e29fb26d206",
+      "stage": "review"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "4fcd80d8-acb3-4211-a579-e08f17efd1f4",
+      "status": "completed",
+      "primaryProvider": "codex",
+      "reviewProvider": "claude",
+      "attempts": {
+        "primary": 1,
+        "review": 1
+      }
+    },
+    {
+      "id": "19302ca4-853a-4993-9cfd-87d3500160ae",
+      "status": "completed",
+      "primaryProvider": "claude",
+      "reviewProvider": "codex",
+      "attempts": {
+        "primary": 1,
+        "review": 1
+      }
+    },
+    {
+      "id": "ef42f02b-b5ab-49da-8b11-9e29fb26d206",
+      "status": "completed",
+      "primaryProvider": "codex",
+      "reviewProvider": "claude",
+      "attempts": {
+        "primary": 1,
+        "review": 1
+      }
+    }
+  ],
+  "contextVersions": [
+    {
+      "id": "43961de3-62ba-45af-9479-bb2f9beddc24",
+      "conversationId": "062dcc2d-e009-46b0-a0a4-7c84c64b2c16",
+      "version": 1,
+      "text": "Agreed project name: Harbor. The selected value is 8.",
+      "sources": [
+        "Synthetic test facts. No private user data."
+      ],
+      "createdAt": "2026-10-09T12:39:59.816Z",
+      "metadata": {}
+    },
+    {
+      "id": "a3cd9106-fbe0-4ad2-ae1f-f355523f53d6",
+      "conversationId": "062dcc2d-e009-46b0-a0a4-7c84c64b2c16",
+      "version": 2,
+      "text": "Correction: the selected value is 14. This supersedes 8. Agreed project name: Harbor.",
+      "sources": [
+        "Synthetic correction"
+      ],
+      "createdAt": "2026-10-09T12:39:59.824Z",
+      "metadata": {}
+    }
+  ],
+  "correctedContextAfterRestart": true,
+  "explanation": "Prompts, queue state, context delivery and persistence are tested. Model understanding and real collaboration remain blocked."
+}

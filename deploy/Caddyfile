@@ -1,0 +1,17 @@
+{
+	admin off
+}
+
+{$DOMAIN} {
+	encode zstd gzip
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy no-referrer
+		X-Frame-Options DENY
+	}
+	# Access logging is not enabled. Never add prompt, cookie, or auth-header logs.
+	reverse_proxy app:3000 {
+		# Always overwrite the browser's value; app port is private to this network.
+		header_up X-Private-Client-IP {remote_host}
+	}
+}

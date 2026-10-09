@@ -1,0 +1,21 @@
+{
+  "name": "private-ai-group-chat",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Private answer and peer-review runner with explicit mocks and gated subscription adapters.",
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "start": "node src/server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "proof": "node scripts/mock-proof.mjs",
+    "backup": "node scripts/backup.mjs",
+    "restore": "node scripts/restore.mjs",
+    "connect:openai": "node scripts/connect-openai.mjs",
+    "prove:subscriptions": "node scripts/prove-subscriptions.mjs"
+  },
+  "license": "MIT"
+}
