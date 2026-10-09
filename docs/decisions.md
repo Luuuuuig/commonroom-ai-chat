@@ -24,11 +24,11 @@ Do not use app-server's built-in ChatGPT authentication for a hosted service. Do
 
 ## D04. Open-source self-hosted route selected
 
-Status: source-publication option authorized on 9 October 2026; publication not yet verified.
+Status: source publication authorized and verified on 9 October 2026; accounts unverified.
 
-The owner selected publication of the generic application source. Use the MIT license and the documented self-hosted OSS SIWC route. Chats, account information, imported documents and credentials remain private. Source authorization is separate from actual publication and from provider account eligibility. A private source directory with an OSS license is not sufficient evidence of public availability.
+The generic MIT source is public at [commonroom-ai-chat](https://github.com/Luuuuuig/commonroom-ai-chat), verified at commit `62406e41a0d4f52a61ab4a85ce53b278c5fcf875`. Follow the documented self-hosted OSS SIWC route. Chats, account information, imported documents and credentials remain private. Publication does not establish provider account eligibility.
 
-Prepare the local OAuth helper and subscription adapter, then verify source publication and obtain account sign-in before live proof. Sign-in and completed inference have their own acceptance gate.
+The local OAuth helper and subscription adapter have fixture coverage. Obtain supported account sign-in and verify spending controls before live proof. Sign-in and completed inference have their own acceptance gate.
 
 ## D05. Small single-instance implementation
 
@@ -66,5 +66,5 @@ Keep deterministic mock tests, real account tests, and computer-off availability
 
 Status: adopted from the user's instruction.
 
-Routine reversible development proceeds without repeated confirmation. Ask when provider sign-in is needed, for a new substantive choice, or before hosting expenditure. Prepare deployment configuration and a current cost scenario before asking to purchase infrastructure. Generic source publication is approved. Hosting expenditure is not approved.
+Routine reversible development proceeds without repeated confirmation. Ask when provider sign-in is needed, for a new substantive choice, or before hosting expenditure. Prepare deployment configuration and a current cost scenario before asking to purchase infrastructure. Generic source publication is complete. Hosting expenditure is not approved.
 

@@ -2,9 +2,10 @@
   "name": "Commonroom AI Group Chat",
   "license": "MIT",
   "sourcePublicationAuthorized": true,
-  "sourcePublished": false,
-  "repositoryUrl": null,
-  "verifiedPublicCommit": null,
+  "sourcePublished": true,
+  "repositoryUrl": "https://github.com/Luuuuuig/commonroom-ai-chat",
+  "verifiedPublicCommit": "62406e41a0d4f52a61ab4a85ce53b278c5fcf875",
+  "verifiedPublicTree": "eff2d94af65ee5ae1d7615ac228f6310a985e0b1",
   "realIntegrationVerified": false,
-  "note": "Publication is authorized. A public source repository and account access have not yet been verified."
+  "note": "Public MIT source verified against all 48 reviewed files. Provider accounts, subscription funding and live integration remain unverified."
 }

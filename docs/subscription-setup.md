@@ -1,10 +1,18 @@
 # Subscription setup and proof
 
-This is preparation for the selected open-source, self-hosted route. Source publication, native sign-in, account entitlement and actual billing remain separate checks. Nothing in this guide enables a paid API fallback.
+The selected open-source, self-hosted route has verified public source. Native sign-in, account entitlement and actual billing remain separate checks. Nothing in this guide enables a paid API fallback.
 
-## 1. Verify publication and spend controls
+## Choose the proof runtime
 
-Publish the sanitized generic MIT source, verify the public repository and commit, and record them in `docs/release.json`. The prepared release has `sourcePublished: false`; the proof runner exits before model calls while this remains false.
+The current implementation is tested on Linux with Node.js 24. For a no-cost account proof, use an existing Linux machine or a suitable WSL 2 environment with the native Linux Claude Code client. Keep source and private data on its Linux filesystem, not a Windows-mounted folder. Native Windows execution is unverified: the settings checks depend on POSIX file permissions, and CLI isolation/cancellation use Linux-oriented behavior.
+
+This development workspace has no Claude client and its permitted network destinations exclude the provider authentication and inference endpoints. A separate cloud browser cannot receive the helper's `127.0.0.1` callback on behalf of this runtime. Complete the supported sign-in where the helper runs, using a browser that can reach that loopback listener. Do not forward tokens or callback URLs through chat.
+
+A local account proof does not satisfy cloud availability. If no suitable existing runtime is available, select a cloud host and obtain expenditure approval before provisioning it. The remote credential transfer remains a separately verified setup step.
+
+## 1. Verify account spend controls
+
+The generic MIT source is public at [commonroom-ai-chat](https://github.com/Luuuuuig/commonroom-ai-chat), verified at commit `62406e41a0d4f52a61ab4a85ce53b278c5fcf875`. Publication evidence is recorded in `docs/release.json`. The proof runner still requires supported sign-in and explicit account spend verification before model calls.
 
 In each provider's own account settings, confirm that paid extra usage, automatic credit purchases and usage-billed fallbacks are off. The application cannot infer these account-level settings merely from successful OAuth. Existing plan usage is shared with your other activity.
 

@@ -2,13 +2,13 @@
 
 Assessment date: 2026-10-09, Europe/Berlin. Source retrieval date: 2026-10-09.
 
-## Phase 0 result: route selected, publication and account proof pending
+## Phase 0 result: route selected and source published, account proof pending
 
 The selected route is **Sign in with ChatGPT (SIWC) for an eligible self-hosted application, plus unmodified Claude Code using the user's own subscription login, on a private persistent VM**. This meets Phase 0's documentation and route-selection criteria with official subscription evidence and a plausible cloud path. It does not establish this private application's OpenAI eligibility, either account's entitlement, or a working exchange.
 
-The source-publication option was approved on 9 October 2026. The selected route is generic MIT-licensed source with a private self-hosted deployment. Conversations, credentials, account details and imported project files remain private. Actual public source availability, account entitlement and live operation are still unverified. Adding a license to a private directory is not evidence of publication.
+The generic MIT source is published at [commonroom-ai-chat](https://github.com/Luuuuuig/commonroom-ai-chat), verified at commit `62406e41a0d4f52a61ab4a85ce53b278c5fcf875`. The selected deployment remains private and self-hosted. Conversations, credentials, account details and imported project files remain private. Account entitlement and live operation are still unverified.
 
-No hosting purchase, public source publication, account sign-in, or live inference is established by this assessment. Phases 1 through 5 remain unaccepted until their real-provider gates pass. The supplied plan expressly permits independent components and clearly labeled mocks to continue during this block.
+No hosting purchase, provider account sign-in or live inference has occurred. Phases 1 through 5 remain unaccepted until their real-provider gates pass. The supplied plan expressly permits independent components and clearly labeled mocks to continue during this block.
 
 ## Route comparison
 
@@ -62,7 +62,7 @@ No cookies are extracted, no login challenges bypassed, and no sessions are rela
 
 ## Proof required before accepting subsequent phases
 
-1. Verify the authorized generic source publication, then verify the selected account can use the OSS SIWC route.
+1. With source publication verified, verify the selected account can use the OSS SIWC route.
 2. Complete each provider's supported login on a suitable isolated runner. Obtain approval before any new hosting expenditure.
 3. Record redacted account/authentication evidence and the actual billing route. Reject unexpected credentials.
 4. Run a harmless answer and automatic review in both directions. Require explicit completion, not partial streamed text.

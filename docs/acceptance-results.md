@@ -43,6 +43,6 @@ A second independent review found callback parsing/state-consumption defects and
 
 ## Phase decisions
 
-Phase 0's documentation and route-selection criteria are met: a named subscription route has official evidence and a plausible private VM path, and native feature gaps are documented. Publication and account eligibility remain prerequisites for live proof. No real two-provider exchange exists, so Phase 1 remains blocked. Independent portions of Phases 2 and 3 are implemented with mocks. Phase 4 is prepared but untested and undeployed. Phase 5 cannot pass until the essential real collaboration and computer-off scenarios pass.
+Phase 0's documentation and route-selection criteria are met: a named subscription route has official evidence and a plausible private VM path, and native feature gaps are documented. Public MIT source is verified at [commit 62406e41a0d4](https://github.com/Luuuuuig/commonroom-ai-chat/commit/62406e41a0d4f52a61ab4a85ce53b278c5fcf875); its tree matches all 48 reviewed files. Account eligibility and spending controls remain unverified. No real two-provider exchange exists, so Phase 1 remains blocked. Independent portions of Phases 2 and 3 are implemented with mocks. Phase 4 is prepared but untested and undeployed. Phase 5 cannot pass until the essential real collaboration and computer-off scenarios pass.
 
 Cloud availability test duration: **not run**. Real-exchange screenshot/recording: **not available**. Hosting spend: **none**. Separate model API spend from this application: **none**.

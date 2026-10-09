@@ -45,9 +45,13 @@ The credentials belonging to this ChatGPT development session were not reused, c
 
 No quota amount is shown because neither provider has supplied real quota data. No API-key fallback, subscription-credit purchase, or account-level spending change exists in the application.
 
+## Publication evidence
+
+The public MIT repository is [commonroom-ai-chat](https://github.com/Luuuuuig/commonroom-ai-chat). Verified source commit `62406e41a0d4f52a61ab4a85ce53b278c5fcf875`, tree `eff2d94af65ee5ae1d7615ac228f6310a985e0b1`, matches all 48 reviewed files. Publication establishes source availability only; account access and live inference remain unverified.
+
 ## Required live proof for the selected open-source route
 
-1. Publish the authorized generic MIT source and verify the public repository and commit. Record publication evidence; then verify the account's eligibility for OSS SIWC.
+1. Verify the account's eligibility for OSS SIWC using the published source route.
 2. Use supported provider login on the approved host. The owner completes sign-in. Store no secrets in transcripts or ordinary logs.
 3. Record installed versions, non-sensitive authentication type and eligible plan details, granted scopes where applicable, and verified spending controls. Redact account identifiers.
 4. Run a harmless question through OpenAI, then Claude review. Repeat in reverse. Record completed response IDs and observable billing route without copying tokens.

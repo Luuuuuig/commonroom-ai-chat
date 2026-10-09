@@ -4,13 +4,13 @@ Implementation checkpoint, 9 October 2026. **This is a working local application
 
 The app implements a private chat, automatic answer-to-review routing, durable SQLite history and jobs, selected shared context, and recovery controls. Mock responses explicitly identify themselves as deterministic fixtures. They do not perform useful model generation or factual peer review.
 
-Separately billed model APIs are disabled. The selected route uses published MIT source with private self-hosting, Sign in with ChatGPT (SIWC), and native Claude Code subscription login. Source publication and both account proofs remain pending. The web server refuses live mode. No infrastructure has been purchased or deployed.
+Separately billed model APIs are disabled. The selected route uses published MIT source with private self-hosting, Sign in with ChatGPT (SIWC), and native Claude Code subscription login. Source publication is verified; both account proofs remain pending. The web server refuses live mode. No infrastructure has been purchased or deployed.
 
 ## Phase status
 
 | Phase | Current result |
 | --- | --- |
-| 0, feasibility | Documentation and route selection passed. Source publication and account eligibility require verification before live proof. |
+| 0, feasibility | Documentation, route selection and source publication passed. Account eligibility remains unverified. |
 | 1, real provider proof | Blocked. No accounts connected and no real model requests sent. |
 | 2, chat and orchestration | Implemented and tested with mocks. Real-provider acceptance remains blocked. |
 | 3, shared context | Persistence, versions, selected text import and export tested locally. Model understanding remains untested. |
@@ -67,7 +67,7 @@ The guarded Claude adapter disables tools and MCP, uses a strict child-process e
 - Context and prompts retain versions. The app rejects oversized context rather than silently dropping corrections.
 - Model review sees the exact final answer and explicit evidence, not hidden reasoning or unreported tool activity.
 
-The generic source is licensed under MIT and publication is authorized. Public repository creation remains pending. Runtime data, credentials and private project material stay outside the release. A sanitized initial public history is prepared separately from the private development checkpoint.
+The generic MIT source is public at [commonroom-ai-chat](https://github.com/Luuuuuig/commonroom-ai-chat). Verified source commit `62406e41a0d4f52a61ab4a85ce53b278c5fcf875` matches all 48 reviewed files. Runtime data, credentials and private project material remain private. The public repository uses sanitized initial history.
 
 ## Documentation
 
