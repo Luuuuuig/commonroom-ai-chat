@@ -6,11 +6,13 @@ The generic MIT source is public at [commonroom-ai-chat](https://github.com/Luuu
 
 ## Then continue the phase gates
 
-- Identify an available Linux/WSL proof runtime. The development workspace cannot run the live provider test. Prefer an existing runtime for the account proof; any new cloud host needs expenditure approval.
+- Proceed toward an online private deployment on a persistent Linux VM. A local Linux/WSL proof is optional, not a prerequisite for the hosted application. Identify an existing authorized host, or obtain a hosting account, verify stock and present the exact quote before requesting expenditure approval.
+- Prepare the selected VM for the first real account proof before enabling live service. The current Docker image is mock-only and does not install Claude Code; it is not a ready live-provider deployment.
+- Complete the OpenAI helper's supported local sign-in and secure VM credential transfer. This setup step does not require keeping the personal computer on for normal use. Transfer, renewal and machine-specific login behavior still need verification.
 - The selected OpenAI sign-in/adapter has fixture coverage. Verify its real provider behavior after supported account sign-in.
 - Verify the user's subscription entitlements and account-level spend controls, then ask for provider sign-in through official flows.
 - Prove both provider orders and a follow-up before polishing or deploying live inference.
-- Obtain a current host quote after route proof. The prepared low-cost option is a Hetzner CX33 if available, estimated €12.93/month including assumed Netherlands VAT, IPv4 and provider backups. Availability and final invoice remain unverified. Do not purchase or choose a more expensive fallback without approval.
+- The prepared low-cost option is a Hetzner CX33 if available, estimated €12.93/month including assumed Netherlands VAT, IPv4 and provider backups. Public pricing was rechecked on 9 October 2026; the public page still marks CX33 unavailable. Authenticated stock and the final quote remain unverified. If a new host is necessary for the proof itself, approve that cost before the proof. Do not purchase or choose a more expensive fallback without approval.
 - Build/test containers, trusted-proxy behavior, HTTPS, secrets, restore, worker restart and private access. Pin image digests after testing.
 - Record an actual computer-off test, duration, and a redacted screenshot of both real provider orders.
 

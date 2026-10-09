@@ -8,7 +8,7 @@ The current implementation is tested on Linux with Node.js 24. For a no-cost acc
 
 This development workspace has no Claude client and its permitted network destinations exclude the provider authentication and inference endpoints. A separate cloud browser cannot receive the helper's `127.0.0.1` callback on behalf of this runtime. Complete the supported sign-in where the helper runs, using a browser that can reach that loopback listener. Do not forward tokens or callback URLs through chat.
 
-A local account proof does not satisfy cloud availability. If no suitable existing runtime is available, select a cloud host and obtain expenditure approval before provisioning it. The remote credential transfer remains a separately verified setup step.
+A local account proof is optional and does not satisfy cloud availability. The project can proceed directly to a cloud VM for the proof and later service, after hosting access and expenditure approval. OpenAI's documented VM procedure still requires supported local sign-in and secure credential transfer; this is a setup/reauthorization step, not a dependency on a personal computer during normal operation. The transfer remains a separately verified setup step.
 
 ## 1. Verify account spend controls
 
